@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -9,6 +8,28 @@
     <!--     github.com/he-weilai/love-code -->
     <title>I love you</title>
     <style type="text/css">
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            background-color: #ea80b0;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50px;
+            z-index: 1000; /* 保证按钮在最上层 */
+        }
+
+        .play-button:hover {
+            background-color: #30a020; /* 更深的绿色 */
+        }
         body {
             margin: 0;
             overflow: hidden;
@@ -127,23 +148,50 @@
         }
 
 
-        .play-button {
-            background-color:#ea80b0 ;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
+/*.play-button {*/
+/*    width: 100px;*/
+/*    height: 90px;*/
+/*    background-color: #ea80b0;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    padding: 10px 20px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 50%;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
 
-        .play-button:hover {
-            background-color: #30a020; /* 更深的绿色 */
-        }
+/*.play-button::before,*/
+/*.play-button::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 100px;*/
+/*    height: 150px;*/
+/*    background-color: #ea80b0;*/
+/*    border-radius: 50%;*/
+/*    top: -30px;*/
+/*}*/
+
+/*.play-button::before {*/
+/*    left: 50px;*/
+/*    transform: rotate(45deg);*/
+/*}*/
+
+/*.play-button::after {*/
+/*    left: 0;*/
+/*    transform: rotate(-45deg);*/
+/*}*/
+
+/*.play-button:hover {*/
+/*    background-color: #30a020;*/
+/*}*/
+
     </style>
 </head>
 
@@ -153,7 +201,7 @@
     <source src="17.mp3" type="audio/mpeg">
     您的浏览器不支持 audio 标签。
 </audio>
-<button class='play-button' onclick="playAudio()">点我有惊喜~</button>
+<button class='play-button' onclick="playAudio()">点我~</button>
 <script>
     function playAudio() {
         const audioElement = document.getElementById('myAudio');
